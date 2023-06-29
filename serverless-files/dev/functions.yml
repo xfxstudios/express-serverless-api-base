@@ -1,0 +1,17 @@
+functions:
+  app:
+    handler: .dist/src/server.handler
+    events:
+      - http:
+          path: /test
+          method: get
+      - http:
+          path: /testWithParam/{name}
+          method: get
+          request:
+            parameters:
+              paths:
+                name: true
+      # - http:
+      #     path: /{proxy+}
+      #     method: ANY
