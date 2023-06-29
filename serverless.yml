@@ -12,9 +12,7 @@ provider:
       Action:
         - 'lambda:InvokeFunction'
         - 'lambda:InvokeAsync'
-        - 'xray:PutTraceSegments'
-        - 'xray:PutTelemetryRecords'
-        - 'cloudformation:CreateStack'
+        - 'cognito:*'
         - 'sqs:*'
         - 's3:*'
       Resource: '*'
